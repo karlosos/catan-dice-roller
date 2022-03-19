@@ -1,4 +1,4 @@
-# Catan Dice Roller 
+# Catan Dice Roller
 
 ### Running application 👨‍💻
 
@@ -35,7 +35,7 @@ To build storybook run:
 npm run storybook:build
 ```
 
-### Build application 🚀 
+### Build application 🚀
 
 ```
 npm run build
@@ -48,4 +48,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
