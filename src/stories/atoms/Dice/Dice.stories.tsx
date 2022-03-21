@@ -1,17 +1,17 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 
-import { Button } from "./Button";
+import { Dice } from "./Dice";
 
 export default {
-  title: "atoms/CatanButton",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: "atoms/Dice",
+  component: Dice,
+} as ComponentMeta<typeof Dice>;
 
 export const Primary = () => {
   return (
     <>
-      <Button>Roll</Button>
+      <Dice />
     </>
   );
 };
