@@ -49,6 +49,7 @@ const ContentStyled = styled.span`
   text-transform: uppercase;
   transition: color ease-in-out 1000ms;
 `;
+
 export const Button: React.FC = ({ children }) => {
   // Source: https://www.royal-wow.com/
   return (
