@@ -6,9 +6,8 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #ede2ab;
-    align-items: center;
-    justify-content: center;
     height: 100%;
+    position: absolute;
 `
 
 const DiceContainer = styled.div`
@@ -16,6 +15,10 @@ const DiceContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
+`
+
+const ButtonContainer = styled.div`
 `
 
 export const RollerView: React.VFC = () => {
@@ -34,9 +37,9 @@ export const RollerView: React.VFC = () => {
                 <Dice value={dice1} />
                 <Dice value={dice2} />
             </DiceContainer>
-            <div onClick={handleRoll}>
+            <ButtonContainer onClick={handleRoll}>
                 <CatanButton>Roll</CatanButton>
-            </div>
+            </ButtonContainer>
         </Container>
     )
 }

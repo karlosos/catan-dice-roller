@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { within, userEvent } from "@storybook/testing-library";
 import { RollerView } from "./RollerView";
+import styled from "styled-components";
 
 export default {
   title: "templates/RollerView",
@@ -12,6 +12,17 @@ export default {
   },
 } as ComponentMeta<typeof RollerView>;
 
-const Template: ComponentStory<typeof RollerView> = (args) => <RollerView {...args} />;
+const StoryWrapper = styled.div`
+  position: relative;
+  height: 500px;
+`
+
+const Template: ComponentStory<typeof RollerView> = (args) => { 
+  return (
+    <StoryWrapper>
+      <RollerView {...args} />
+    </StoryWrapper>
+  )
+};
 
 export const Default = Template.bind({});
