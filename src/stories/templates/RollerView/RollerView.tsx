@@ -1,24 +1,20 @@
 import { useState } from "react"
 import { CatanButton, Dice } from "stories/atoms"
 import styled from "styled-components"
+import { DiceContainer } from "./DiceContainer"
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #ede2ab;
     height: 100%;
+    width: 100%;
     position: absolute;
 `
 
-const DiceContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-`
-
 const ButtonContainer = styled.div`
+    margin-bottom: 10px;
 `
 
 export const RollerView: React.VFC = () => {
@@ -33,10 +29,7 @@ export const RollerView: React.VFC = () => {
 
     return (
         <Container>
-            <DiceContainer>
-                <Dice value={dice1} />
-                <Dice value={dice2} />
-            </DiceContainer>
+            <DiceContainer dice1={dice1} dice2={dice2} />
             <ButtonContainer onClick={handleRoll}>
                 <CatanButton>Roll</CatanButton>
             </ButtonContainer>
