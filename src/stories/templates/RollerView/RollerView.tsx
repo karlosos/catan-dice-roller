@@ -8,6 +8,7 @@ import { randomValueFromArray } from "utils/random";
 
 import clickSfx from "../../assets/click.ogg";
 import rollSfx from "../../assets/dice_roll.ogg";
+import robberSfx from "../../assets/robber_normalized.ogg";
 import { ButtonContainer, Container } from "./RollerView.style";
 
 export const RollerView: React.VFC = () => {
@@ -18,7 +19,8 @@ export const RollerView: React.VFC = () => {
   const isButtonDisabledRef = useRef<boolean>();
   isButtonDisabledRef.current = isButtonDisabled;
   const [playRollSfx] = useSound(rollSfx);
-  const [playClickSfx] = useSound(clickSfx);
+  const [playClickSfx] = useSound(clickSfx, { volume: 0.3 });
+  const [playRobberSfx] = useSound(robberSfx)
 
   const handleRoll = () => {
     if (isButtonDisabled) {
@@ -30,9 +32,22 @@ export const RollerView: React.VFC = () => {
 
     setTimeout(() => {
       playRollSfx();
-      setDice1(randomValueFromArray(DICE_FACES));
-      setDice2(randomValueFromArray(DICE_FACES));
+      const dice1Value = randomValueFromArray(DICE_FACES)
+      const dice2Value = randomValueFromArray(DICE_FACES)
+      setDice1(dice1Value);
+      setDice2(dice2Value);
       setShowDice(true);
+
+      // Show robber icon
+      setTimeout(() => {
+        if (dice1Value + dice2Value === 7) {
+          setShowDice(false);
+          playRobberSfx();
+          // TODO: add robber animation
+        }
+      }, 1500)
+
+      // Enable button again after cooldown
       setTimeout(() => {
         setIsButtonDisabled(false);
       }, 3000);

@@ -10,7 +10,7 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<"div"> {
 
 export const Button: React.FC<ButtonProps> = ({ children, onClick, isDisabled}) => {
   // Source: https://www.royal-wow.com/
-  const [playClickSfx] = useSound(clickSfx);
+  const [playClickSfx] = useSound(clickSfx, { volume: 0.3 });
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (isDisabled) {
