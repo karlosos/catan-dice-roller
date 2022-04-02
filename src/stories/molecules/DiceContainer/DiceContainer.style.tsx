@@ -1,7 +1,6 @@
-import { Dice } from "stories/atoms";
 import styled, { css, Keyframes, keyframes } from "styled-components";
 
-const slideTop1 = keyframes`
+export const slideTop1 = keyframes`
   0% {
     transform: translateY(300px) rotate(0deg);
   }
@@ -10,7 +9,7 @@ const slideTop1 = keyframes`
   }
 `;
 
-const slideTop2 = keyframes`
+export const slideTop2 = keyframes`
   0% {
     transform: translateY(300px) rotate(0deg);
   }
@@ -19,7 +18,7 @@ const slideTop2 = keyframes`
   }
 `;
 
-const scaleDown1 = keyframes`
+export const scaleDown1 = keyframes`
   0% {
     transform: translateY(0px) rotate(-5deg);
   }
@@ -29,7 +28,7 @@ const scaleDown1 = keyframes`
     }
 `;
 
-const scaleDown2 = keyframes`
+export const scaleDown2 = keyframes`
     0% {
         transform: translateY(-35px) rotate(25deg);
     }
@@ -39,7 +38,7 @@ const scaleDown2 = keyframes`
     }
 `;
 
-const DiceContainerStyled = styled.div`
+export const DiceContainerStyled = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -52,7 +51,7 @@ const DiceContainerStyled = styled.div`
   }
 `;
 
-const Dice1Styled = styled.div<{ animationName: Keyframes }>`
+export const Dice1Styled = styled.div<{ animationName: Keyframes }>`
   animation-name: ${(props) => props.animationName};
   ${(props) => {
     if (props.animationName === scaleDown1) {
@@ -73,7 +72,7 @@ const Dice1Styled = styled.div<{ animationName: Keyframes }>`
   }}
 `;
 
-const Dice2Styled = styled.div<{ animationName: Keyframes }>`
+export const Dice2Styled = styled.div<{ animationName: Keyframes }>`
   animation-name: ${(props) => props.animationName};
   ${(props) => {
     if (props.animationName === scaleDown2) {
@@ -93,20 +92,3 @@ const Dice2Styled = styled.div<{ animationName: Keyframes }>`
     }
   }}
 `;
-
-export const DiceContainer: React.FC<{
-  dice1: number;
-  dice2: number;
-  showDice: boolean;
-}> = ({ dice1, dice2, showDice }) => {
-  return (
-    <DiceContainerStyled>
-      <Dice1Styled animationName={showDice ? slideTop1 : scaleDown1}>
-        <Dice value={dice1} />
-      </Dice1Styled>
-      <Dice2Styled animationName={showDice ? slideTop2 : scaleDown2}>
-        <Dice value={dice2} />
-      </Dice2Styled>
-    </DiceContainerStyled>
-  );
-};

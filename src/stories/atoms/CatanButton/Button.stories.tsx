@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentMeta } from "@storybook/react";
 
 import { Button } from "./Button";
@@ -9,9 +8,9 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 export const Primary = () => {
-  return (
-    <>
-      <Button>Roll</Button>
-    </>
-  );
+  return <Button>Roll</Button>;
+};
+
+export const Disabled = () => {
+  return <Button isDisabled={true}>Roll</Button>;
 };
