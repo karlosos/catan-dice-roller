@@ -14,8 +14,7 @@ export default {
 
 const StoryWrapper = styled.div`
   position: relative;
-  height: 500px;
-  width: 800px;
+  height: 100vh;
 `
 
 const Template: ComponentStory<typeof RollerView> = (args) => { 
