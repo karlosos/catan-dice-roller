@@ -1,7 +1,9 @@
 import { useKeyPress } from "hooks/useKeyPress";
 import { useRef, useState } from "react";
 import { CatanButton } from "stories/atoms";
+import { Robber } from "stories/atoms/Robber";
 import { DiceContainer } from "stories/molecules/DiceContainer";
+import styled from "styled-components";
 import useSound from "use-sound";
 import { DICE_FACES } from "utils/consts";
 import { randomValueFromArray } from "utils/random";
@@ -15,6 +17,7 @@ export const RollerView: React.VFC = () => {
   const [dice1, setDice1] = useState(1);
   const [dice2, setDice2] = useState(1);
   const [showDice, setShowDice] = useState(false);
+  const [showRobber, setShowRobber] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const isButtonDisabledRef = useRef<boolean>();
   isButtonDisabledRef.current = isButtonDisabled;
@@ -29,6 +32,7 @@ export const RollerView: React.VFC = () => {
 
     setIsButtonDisabled(true);
     setShowDice(false);
+    setShowRobber(false);
 
     setTimeout(() => {
       playRollSfx();
@@ -43,7 +47,7 @@ export const RollerView: React.VFC = () => {
         if (dice1Value + dice2Value === 7) {
           setShowDice(false);
           playRobberSfx();
-          // TODO: add robber animation
+          setShowRobber(true);
         }
       }, 1500)
 
@@ -63,7 +67,10 @@ export const RollerView: React.VFC = () => {
 
   return (
     <Container>
-      <DiceContainer dice1={dice1} dice2={dice2} showDice={showDice} />
+      <OutputContainer>
+        <DiceContainer dice1={dice1} dice2={dice2} showDice={showDice} />
+        <Robber showRobber={showRobber} />
+      </OutputContainer>
       <ButtonContainer>
         <CatanButton onClick={handleRoll} isDisabled={isButtonDisabled}>
           Roll
@@ -72,3 +79,11 @@ export const RollerView: React.VFC = () => {
     </Container>
   );
 };
+
+const OutputContainer = styled.div`
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
