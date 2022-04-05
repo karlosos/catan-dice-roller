@@ -22,7 +22,16 @@ export const scaleUp = keyframes`
   }
 `;
 
-const RobberStyled = styled.img<{animationName: Keyframes}>`
+const RobberContainer = styled.div`
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+`
+
+const RobberStyled = styled.img<{ animationName: Keyframes }>`
   animation-name: ${(props) => props.animationName};
   ${(props) => {
     if (props.animationName === scaleDown) {
@@ -43,7 +52,17 @@ const RobberStyled = styled.img<{animationName: Keyframes}>`
   }}
 `;
 
-export const Robber: React.VFC<{showRobber?: boolean}> = ({showRobber = true} = {}) => {
+export const Robber: React.VFC<{ showRobber?: boolean }> = ({
+  showRobber = true,
+} = {}) => {
   const animationName = showRobber ? scaleUp : scaleDown;
-  return <RobberStyled src={robberSrc} alt="robber" animationName={animationName} />;
+  return (
+    <RobberContainer>
+      <RobberStyled
+        src={robberSrc}
+        alt="robber"
+        animationName={animationName}
+      />
+    </RobberContainer>
+  );
 };

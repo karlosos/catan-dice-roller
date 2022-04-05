@@ -39,6 +39,7 @@ export const scaleDown2 = keyframes`
 `;
 
 export const DiceContainerStyled = styled.div`
+  grid-area: 1 / 1;
   display: flex;
   flex-direction: row;
   align-items: center;
