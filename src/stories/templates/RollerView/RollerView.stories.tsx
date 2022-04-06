@@ -26,4 +26,18 @@ const Template: ComponentStory<typeof RollerView> = (args) => {
   )
 };
 
-export const Default = Template.bind({});
+export const WithDices = Template.bind({});
+
+WithDices.args = {
+  dice1: 2,
+  dice2: 3,
+  showDice: true,
+  showRobber: false,
+};
+
+export const WithRobber = Template.bind({});
+
+WithRobber.args = {
+  showDice: false,
+  showRobber: true,
+};
