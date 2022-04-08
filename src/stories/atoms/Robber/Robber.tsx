@@ -1,35 +1,6 @@
-import styled, { css, Keyframes, keyframes } from "styled-components";
+import styled, { css, Keyframes } from "styled-components";
 import robberSrc from "../../assets/robber.png";
-
-export const scaleDown = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-`;
-
-export const scaleUp = keyframes`
-  0% {
-    opacity: 0;
-    transform: scale(0.2);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-`;
-
-const RobberContainer = styled.div`
-  grid-area: 1 / 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-`
+import { RobberContainer, scaleDown, scaleUp } from "./Robber.style";
 
 const RobberStyled = styled.img<{ animationName: Keyframes }>`
   animation-name: ${(props) => props.animationName};
