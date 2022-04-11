@@ -1,50 +1,58 @@
-# Catan Dice Roller
+<!-- ![vscode-portfolio banner](./docs/dashboard_small.png) -->
 
-### Running application 👨‍💻
+<div align="center">
 
-In the project directory, you can run:
+[![Code style: prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg)](https://standardjs.com/)
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
-```
-npm start
-```
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h4 align="center"><img src="./public/favicon-16x16.png" width="16px" />Catan Dice Roller</h4>
 
-```
-npm test
-```
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#development">Development</a> •
+  <a href="#deployment">Deployment</a>
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+<table>
+<tbody>
+<td align="center">
+<img width="2000" height="0"><br>
+Application: <b><a href="https://catan-dice-roller.vercel.app/">catan-dice-roller.vercel.app 🌐</a></b><br>
+<img width="2000" height="0">
+</td>
+</tbody>
+</table>
+</p>
 
-### Storybook 💄
+## About
 
-Run story book with:
+If you don't have dice or enough space on the table use Catan Dice Roller. This web/mobile application will throw two dice for you and notify you when the robber is rolled same as in Catan Universe.
 
-```
-npm run storybook
-```
+App was created using React. This is a PWA, you can install it and use the app offline. 
 
-To build storybook run:
+## Roadmap 
 
-```
-npm run storybook:build
-```
+1. Defining user list (randomly select starti player, show who has the turn).
+2. Statistics view. Show how many times each number was rolled.
+3. Alternative random generator. Similar to Catan Universe.
 
-### Build application 🚀
+## Development
 
-```
-npm run build
-```
+You will need Node v16.13.1. I suggest using `nvm` for managing your node versions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Install dependencies with `npm install`.
+1. Run desktop application with `npm run start` or react app with `npm run react-start`.
+1. Access application under `localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Storybook can be launched with `npm run storybook`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Code coverage can be checked using `npm run test:coverage`.
+
+## Deployment
+
+Application is automatically deployed to GithubPages using `.github/workflows/main.yml` workflow.
