@@ -1,4 +1,4 @@
-<!-- ![vscode-portfolio banner](./docs/dashboard_small.png) -->
+![vscode-portfolio banner](./docs/mockup.png)
 
 <div align="center">
 
@@ -31,7 +31,7 @@ Application: <b><a href="https://catan-dice-roller.vercel.app/">catan-dice-rolle
 
 ## About
 
-If you don't have dice or enough space on the table use Catan Dice Roller. This web/mobile application will throw two dice for you and notify you when the robber is rolled same as in Catan Universe.
+If you don't have dice or enough space on the table use Catan Dice Roller. This web/mobile application will throw two dice for you and notify you when the robber is rolled same as in Catan Universe. The app has sounds 🔊 and cool animations 💫. Check it [here](https://catan-dice-roller.vercel.app/).
 
 App was created using React. This is a PWA, you can install it and use the app offline. 
 
