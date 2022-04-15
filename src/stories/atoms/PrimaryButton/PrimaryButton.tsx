@@ -2,13 +2,13 @@ import React from "react";
 import useSound from "use-sound";
 
 import clickSfx from "../../assets/click.ogg"
-import { BackgroundHover, ButtonStyled, ContentStyled } from "./Button.style";
+import { BackgroundHover, ButtonStyled, ContentStyled } from "./PrimaryButton.style";
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<"div"> {
   isDisabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, onClick, isDisabled}) => {
+export const PrimaryButton: React.FC<ButtonProps> = ({ children, onClick, isDisabled}) => {
   // Source: https://www.royal-wow.com/
   const [playClickSfx] = useSound(clickSfx, { volume: 0.3 });
 

@@ -1,3 +1,2 @@
-export * from "./Button";
-export { Button as CatanButton } from "./CatanButton";
+export { PrimaryButton } from "./PrimaryButton";
 export * from "./Dice"

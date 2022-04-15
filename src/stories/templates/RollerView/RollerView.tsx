@@ -1,4 +1,4 @@
-import { CatanButton } from "stories/atoms";
+import { PrimaryButton } from "stories/atoms";
 import { Robber } from "stories/atoms/Robber";
 import { DiceContainer } from "stories/molecules/DiceContainer";
 import styled from "styled-components";
@@ -20,12 +20,12 @@ export const RollerView: React.FC<RollerViewProps> = ({
       <Robber showRobber={showRobber} />
     </OutputContainer>
     <ButtonContainer>
-      <CatanButton
+      <PrimaryButton
         onClick={onRollButtonClick}
         isDisabled={isRollButtonDisabled}
       >
         Roll
-      </CatanButton>
+      </PrimaryButton>
     </ButtonContainer>
   </Container>
 );
