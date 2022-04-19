@@ -1,4 +1,5 @@
 import React from "react";
+import { testId } from "testUtils/testId";
 import useSound from "use-sound";
 
 import clickSfx from "../../assets/click.ogg"
@@ -22,7 +23,7 @@ export const PrimaryButton: React.FC<ButtonProps> = ({ children, onClick, isDisa
   }
 
   return (
-    <ButtonStyled onClick={handleClick} isDisabled={isDisabled}>
+    <ButtonStyled onClick={handleClick} isDisabled={isDisabled} data-testid={testId.primaryButton}>
       <BackgroundHover isDisabled={isDisabled}>
         <ContentStyled>{children}</ContentStyled>
       </BackgroundHover>
