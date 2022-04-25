@@ -1,4 +1,5 @@
 import styled, { css, Keyframes } from "styled-components";
+import { testId } from "testUtils/testId";
 import robberSrc from "../../assets/robber.png";
 import { RobberContainer, scaleDown, scaleUp } from "./Robber.style";
 
@@ -33,6 +34,7 @@ export const Robber: React.VFC<{ showRobber?: boolean }> = ({
         src={robberSrc}
         alt="robber"
         animationName={animationName}
+        data-testid={testId.robber}
       />
     </RobberContainer>
   );
