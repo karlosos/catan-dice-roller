@@ -7,8 +7,8 @@ export default {
   title: "molecules/DiceContainer",
   component: DiceContainer,
   argTypes: {
-    dice1: { control: "number", min: 1, max: 6 },
-    dice2: { control: "number", min: 1, max: 6 },
+    die1: { control: "number", min: 1, max: 6 },
+    die2: { control: "number", min: 1, max: 6 },
     showDice: Boolean,
   },
 } as ComponentMeta<typeof DiceContainer>;
@@ -26,7 +26,7 @@ const Template: ComponentStory<typeof DiceContainer> = (args) => (
 export const Primary = Template.bind({});
 
 Primary.args = { 
-  dice1: 2,
-  dice2: 5,
+  die1: 2,
+  die2: 5,
   showDice: true,
  };

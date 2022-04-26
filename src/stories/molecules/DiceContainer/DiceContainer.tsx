@@ -1,7 +1,7 @@
-import { Dice } from "stories/atoms";
+import { Die } from "stories/atoms";
 import {
-  Dice1Styled,
-  Dice2Styled,
+  Die1Styled,
+  Die2Styled,
   DiceContainerStyled,
   scaleDown1,
   scaleDown2,
@@ -10,18 +10,18 @@ import {
 } from "./DiceContainer.style";
 
 export const DiceContainer: React.FC<{
-  dice1: number;
-  dice2: number;
+  die1: number;
+  die2: number;
   showDice: boolean;
-}> = ({ dice1, dice2, showDice }) => {
+}> = ({ die1, die2, showDice }) => {
   return (
     <DiceContainerStyled>
-      <Dice1Styled animationName={showDice ? slideTop1 : scaleDown1}>
-        <Dice value={dice1} />
-      </Dice1Styled>
-      <Dice2Styled animationName={showDice ? slideTop2 : scaleDown2}>
-        <Dice value={dice2} />
-      </Dice2Styled>
+      <Die1Styled animationName={showDice ? slideTop1 : scaleDown1}>
+        <Die value={die1} />
+      </Die1Styled>
+      <Die2Styled animationName={showDice ? slideTop2 : scaleDown2}>
+        <Die value={die2} />
+      </Die2Styled>
     </DiceContainerStyled>
   );
 };

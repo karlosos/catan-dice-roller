@@ -52,7 +52,7 @@ export const DiceContainerStyled = styled.div`
   }
 `;
 
-export const Dice1Styled = styled.div<{ animationName: Keyframes }>`
+export const Die1Styled = styled.div<{ animationName: Keyframes }>`
   animation-name: ${(props) => props.animationName};
   ${(props) => {
     if (props.animationName === scaleDown1) {
@@ -73,7 +73,7 @@ export const Dice1Styled = styled.div<{ animationName: Keyframes }>`
   }}
 `;
 
-export const Dice2Styled = styled.div<{ animationName: Keyframes }>`
+export const Die2Styled = styled.div<{ animationName: Keyframes }>`
   animation-name: ${(props) => props.animationName};
   ${(props) => {
     if (props.animationName === scaleDown2) {

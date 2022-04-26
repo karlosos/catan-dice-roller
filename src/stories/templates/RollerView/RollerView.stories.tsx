@@ -29,8 +29,8 @@ const Template: ComponentStory<typeof RollerView> = (args) => {
 export const WithDices = Template.bind({});
 
 WithDices.args = {
-  dice1: 2,
-  dice2: 3,
+  die1: 2,
+  die2: 3,
   showDice: true,
   showRobber: false,
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const DiceStyled = styled.div`
+export const DieStyled = styled.div`
   width: 150px;
   height: 150px;
   background-color: #D5D3D8;

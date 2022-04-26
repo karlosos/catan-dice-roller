@@ -7,8 +7,8 @@ import { ButtonContainer, Container } from "./RollerView.style";
 import { RollerViewProps } from "./types";
 
 export const RollerView: React.FC<RollerViewProps> = ({
-  dice1,
-  dice2,
+  die1,
+  die2,
   showDice,
   showRobber,
   isRollButtonDisabled,
@@ -16,7 +16,7 @@ export const RollerView: React.FC<RollerViewProps> = ({
 }) => (
   <Container>
     <OutputContainer>
-      <DiceContainer dice1={dice1} dice2={dice2} showDice={showDice} />
+      <DiceContainer die1={die1} die2={die2} showDice={showDice} />
       <Robber showRobber={showRobber} />
     </OutputContainer>
     <ButtonContainer>

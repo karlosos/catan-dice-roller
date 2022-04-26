@@ -1,8 +1,8 @@
 import React from "react";
 import { testId } from "testUtils/testId";
-import { DiceStyled, Inner, Pip } from "./Dice.style";
+import { DieStyled, Inner, Pip } from "./Die.style";
 
-export const Dice: React.FC<{ value: number }> = ({ value }) => {
+export const Die: React.FC<{ value: number }> = ({ value }) => {
   let pips = Number.isInteger(value) && value > 0 && value < 7
     ? Array(value)
         .fill(0)
@@ -10,8 +10,8 @@ export const Dice: React.FC<{ value: number }> = ({ value }) => {
     : null;
 
   return (
-    <DiceStyled>
+    <DieStyled>
       <Inner>{pips}</Inner>
-    </DiceStyled>
+    </DieStyled>
   );
 };

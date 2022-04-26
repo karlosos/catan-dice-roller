@@ -1,6 +1,6 @@
 export interface RollerViewProps {
-  dice1: number,
-  dice2: number,
+  die1: number,
+  die2: number,
   showDice: boolean,
   showRobber: boolean,
   onRollButtonClick: () => void,
