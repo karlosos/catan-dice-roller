@@ -24,7 +24,7 @@ describe("DiceContainer Component", () => {
     const [die1, die2] = [3, 5];
 
     // WHEN
-    render(<DiceContainer die1={die1} die2={die2} showDice={true} />)
+    render(<DiceContainer die1={die1} die2={die2} showDice={false} />)
 
     // THEN
     const pips = screen.getAllByTestId(testId.pip);
