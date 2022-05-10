@@ -22,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "storybook:build": "build-storybook -s public"
@@ -69,5 +70,14 @@
     "prettier": "2.6.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "webpack": "^5.70.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!/node_modules/",
+      "!src/index.tsx",
+      "!src/registerServiceWorker.js",
+      "!src/**/*.stories.tsx"
+    ]
   }
 }
