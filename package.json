@@ -76,6 +76,12 @@
       "src/**/*.{ts,tsx}",
       "!/node_modules/",
       "!src/index.tsx",
+      "!src/react-app-env.d.ts",
+      "!src/reportWebVitals.ts",
+      "!src/service-worker.ts",
+      "!src/serviceWorkerRegistration.ts",
+      "!src/**/index.ts",
+      "!src/**/types.ts",
       "!src/registerServiceWorker.js",
       "!src/**/*.stories.tsx"
     ]
