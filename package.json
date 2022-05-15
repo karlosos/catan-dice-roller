@@ -10,7 +10,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "storybook:build": "build-storybook -s public",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check ."
   },
   "dependencies": {
     "react": "17.0.2",
