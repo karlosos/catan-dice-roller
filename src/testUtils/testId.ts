@@ -1,5 +1,5 @@
 export const testId = {
-  pip: 'pip',
-  primaryButton: 'primaryButton',
-  robber: 'robber',
-}
+  pip: "pip",
+  primaryButton: "primaryButton",
+  robber: "robber",
+};

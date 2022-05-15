@@ -45,5 +45,5 @@ describe("RollerView Component", () => {
 
     // THEN
     expect(onButtonClick).not.toBeCalled();
-  })
+  });
 });

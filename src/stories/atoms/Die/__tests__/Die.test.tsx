@@ -19,7 +19,7 @@ describe("Die Component", () => {
   test.each([0, 7, 999, -100])(
     "GIVEN %p as value argument THEN pips are hidden",
     (value) => {
-      // GIVEN, THEN 
+      // GIVEN, THEN
       render(<Die value={value} />);
 
       // THEN

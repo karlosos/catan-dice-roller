@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components";
 
 export const scaleDown = keyframes`
   0% {
@@ -32,4 +32,4 @@ export const RobberContainer = styled.div`
   @media only screen and (max-width: 600px) {
     transform: scale(0.7);
   }
-`
+`;

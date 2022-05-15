@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export function useKeyPress(callback: () => void, keyCodes: string[]): void {
   const handler = ({ key }: { key: string }): void => {
     if (keyCodes.includes(key)) {
-        callback();
+      callback();
     }
   };
 

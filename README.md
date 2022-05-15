@@ -33,9 +33,9 @@ Application: <b><a href="https://catan-dice-roller.vercel.app/">catan-dice-rolle
 
 If you don't have dice or enough space on the table use Catan Dice Roller. This web/mobile application will throw two dice for you and notify you when the robber is rolled same as in Catan Universe. The app has sounds 🔊 and cool animations 💫. Check it [here](https://catan-dice-roller.vercel.app/).
 
-App was created using React. This is a PWA, you can install it and use the app offline. 
+App was created using React. This is a PWA, you can install it and use the app offline.
 
-## Roadmap 
+## Roadmap
 
 1. Defining user list (randomly select starti player, show who has the turn).
 2. Statistics view. Show how many times each number was rolled.

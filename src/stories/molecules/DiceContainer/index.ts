@@ -1,1 +1,1 @@
-export * from "./DiceContainer" 
+export * from "./DiceContainer";

@@ -24,9 +24,7 @@ const RobberStyled = styled.img<{ animationName: Keyframes }>`
   }}
 `;
 
-export const Robber: React.VFC<{ showRobber?: boolean }> = ({
-  showRobber,
-}) => {
+export const Robber: React.VFC<{ showRobber?: boolean }> = ({ showRobber }) => {
   const animationName = showRobber ? scaleUp : scaleDown;
   return (
     <RobberContainer>

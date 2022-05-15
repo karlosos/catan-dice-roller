@@ -6,10 +6,10 @@ import React from "react";
 describe("useKeyPress hook", () => {
   it("WHEN given key pressed THEN handler is called", () => {
     // GIVEN
-    const { onKeyPress } = renderTestComponent({keyCodes: ["Enter"]})
+    const { onKeyPress } = renderTestComponent({ keyCodes: ["Enter"] });
 
     // WHEN
-    userEvent.type(screen.getByText('TestComponent'), '{enter}')
+    userEvent.type(screen.getByText("TestComponent"), "{enter}");
 
     // THEN
     expect(onKeyPress).toBeCalled();
@@ -17,22 +17,28 @@ describe("useKeyPress hook", () => {
 
   it("WHEN other key pressed THEN handler is not called", () => {
     // GIVEN
-    const { onKeyPress } = renderTestComponent({keyCodes: ["Enter"]})
+    const { onKeyPress } = renderTestComponent({ keyCodes: ["Enter"] });
 
     // WHEN
-    userEvent.type(screen.getByText('TestComponent'), '{space}')
+    userEvent.type(screen.getByText("TestComponent"), "{space}");
 
     // THEN
     expect(onKeyPress).not.toBeCalled();
   });
 
-  const TestComponent = ({ keyCodes, onKeyPress }: {keyCodes: string[], onKeyPress: () => void}) => {
+  const TestComponent = ({
+    keyCodes,
+    onKeyPress,
+  }: {
+    keyCodes: string[];
+    onKeyPress: () => void;
+  }) => {
     useKeyPress(onKeyPress, keyCodes);
 
     return <div>TestComponent</div>;
   };
 
-  const renderTestComponent = ({keyCodes}: {keyCodes: string[]}) => {
+  const renderTestComponent = ({ keyCodes }: { keyCodes: string[] }) => {
     const onKeyPress = jest.fn();
 
     render(<TestComponent onKeyPress={onKeyPress} keyCodes={keyCodes} />);
