@@ -2,6 +2,16 @@
   "name": "catan-dice-roller",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "storybook:build": "build-storybook -s public",
+    "format": "npx prettier --write ."
+  },
   "dependencies": {
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -33,15 +43,6 @@
     "@types/node": "16.11.26",
     "@types/react": "17.0.40",
     "@types/react-dom": "17.0.13"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:coverage": "react-scripts test --coverage --watchAll=false",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "storybook:build": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [

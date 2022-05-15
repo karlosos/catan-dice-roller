@@ -53,6 +53,8 @@ Storybook can be launched with `npm run storybook`.
 
 Code coverage can be checked using `npm run test:coverage`.
 
+To format code run `npm run format`.
+
 ## Deployment
 
 Application is automatically deployed to GithubPages using `.github/workflows/main.yml` workflow.
