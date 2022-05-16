@@ -4,6 +4,8 @@
 
 [![Code style: prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg)](https://standardjs.com/)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
+![Language: Typescript](https://img.shields.io/badge/language-typescript-blue)
+[![CI](https://github.com/karlosos/catan-dice-roller/actions/workflows/CI.yaml/badge.svg)](https://github.com/karlosos/catan-dice-roller/actions/workflows/CI.yaml)
 
 </div>
 
@@ -54,6 +56,8 @@ Storybook can be launched with `npm run storybook`.
 Code coverage can be checked using `npm run test:coverage`.
 
 To format code run `npm run format`.
+
+To perform static code analysis run `npm run lint`.
 
 ## Deployment
 
