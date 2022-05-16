@@ -29,5 +29,7 @@ jobs:
         run: npm run build --if-presetn
       - name: Check formatting
         run: npm run format:check
+      - name: Linter 
+        run: npm run lint 
       - name: Tests
         run: npm test
