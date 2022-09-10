@@ -67,6 +67,9 @@ function App() {
       showRobber={showRobber}
       isRollButtonDisabled={isRollButtonDisabled}
       onRollButtonClick={handleRoll}
+      playerIndicatorData={{
+        showPlayerIndicator: false,
+      }}
     />
   );
 }
