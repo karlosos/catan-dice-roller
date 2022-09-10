@@ -12,6 +12,11 @@ export interface RollerViewProps {
     nextPlayerName?: string,
     nextPlayerColor?: PlayerColor,
   },
+  showPlayersListModal: boolean,
   onRollButtonClick: () => void,
   isRollButtonDisabled: boolean,
+  onModalOpen: () => void,
+  onModalClose: () => void,
+  onPlayersListSave: (players: { id: number; name: string; color: PlayerColor }[]) => void
+  playersList: { id: number; name: string; color: PlayerColor }[];
 }

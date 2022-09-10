@@ -15,10 +15,10 @@ const Container = styled.div`
   font-family: Roboto;
 `;
 
-const CurrentPlayerColor = styled.div<{ color: PlayerColor}>`
+const CurrentPlayerColor = styled.div<{ color: PlayerColor }>`
   width: 32px;
   height: 32px;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   border-radius: 4px;
   margin-left: 8px;
 `;
@@ -32,6 +32,17 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   border-left: 2px solid black;
+  border-right: 2px solid black;
+`;
+
+const SettingsButtonSection = styled.div`
+  padding-left: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
 `;
 
 const CurrentPlayerName = styled.div`
@@ -53,36 +64,45 @@ const NextPlayerName = styled.span`
   margin-left: 4px;
 `;
 
-const NextPlayerColor = styled.div<{ color: PlayerColor}>`
+const NextPlayerColor = styled.div<{ color: PlayerColor }>`
   margin-left: 4px;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   width: 12px;
   height: 12px;
   border-radius: 2px;
 `;
 
 export const PlayerIndicator: React.FC<{
-  currentPlayerName: string;
-  currentPlayerColor: PlayerColor;
-  nextPlayerName: string;
-  nextPlayerColor: PlayerColor;
+  showPlayerIndicator: boolean;
+  currentPlayerName?: string;
+  currentPlayerColor?: PlayerColor;
+  nextPlayerName?: string;
+  nextPlayerColor?: PlayerColor;
+  handleOpenModal: () => void;
 }> = ({
+  showPlayerIndicator,
   currentPlayerName,
   currentPlayerColor,
   nextPlayerName,
   nextPlayerColor,
+  handleOpenModal,
 }) => {
   return (
     <Container>
-      <CurrentPlayerColor color={currentPlayerColor}/>
-      <RightSection>
-        <CurrentPlayerName>{currentPlayerName}</CurrentPlayerName>
-        <NextPlayerContainer>
-          <NextPlayerLabel>Next player:</NextPlayerLabel>
-          <NextPlayerName>{nextPlayerName}</NextPlayerName>
-          <NextPlayerColor color={nextPlayerColor}/>
-        </NextPlayerContainer>
-      </RightSection>
+      {showPlayerIndicator && (
+        <>
+          <CurrentPlayerColor color={currentPlayerColor!} />
+          <RightSection>
+            <CurrentPlayerName>{currentPlayerName}</CurrentPlayerName>
+            <NextPlayerContainer>
+              <NextPlayerLabel>Next player:</NextPlayerLabel>
+              <NextPlayerName>{nextPlayerName}</NextPlayerName>
+              <NextPlayerColor color={nextPlayerColor!} />
+            </NextPlayerContainer>
+          </RightSection>
+        </>
+      )}
+      <SettingsButtonSection onClick={handleOpenModal}>⚙️</SettingsButtonSection>
     </Container>
   );
 };

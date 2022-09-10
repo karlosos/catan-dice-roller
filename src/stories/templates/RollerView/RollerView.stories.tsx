@@ -37,6 +37,7 @@ WithDices.args = {
   playerIndicatorData: {
     showPlayerIndicator: false,
   },
+  showPlayersListModal: false,
 };
 
 export const WithRobber = Template.bind({});
@@ -47,6 +48,7 @@ WithRobber.args = {
   playerIndicatorData: {
     showPlayerIndicator: false,
   },
+  showPlayersListModal: false,
 };
 
 export const WithPlayerIndicator = Template.bind({});
@@ -62,4 +64,21 @@ WithPlayerIndicator.args = {
     nextPlayerName: "Szymon",
     nextPlayerColor: PlayerColor.WHITE,
   },
+  showPlayersListModal: false,
+};
+
+export const WithPlayersListModal = Template.bind({});
+
+WithPlayersListModal.args = {
+  die1: 2,
+  die2: 3,
+  showDice: true,
+  playerIndicatorData: {
+    showPlayerIndicator: true,
+    currentPlayerName: "Karol",
+    currentPlayerColor: PlayerColor.GREEN,
+    nextPlayerName: "Szymon",
+    nextPlayerColor: PlayerColor.WHITE,
+  },
+  showPlayersListModal: true,
 };

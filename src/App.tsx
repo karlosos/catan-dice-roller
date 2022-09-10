@@ -7,6 +7,7 @@ import robberSfx from "stories/assets/robber_normalized.ogg";
 import useSound from "use-sound";
 import { DIE_FACES } from "utils/consts";
 import { randomValueFromArray } from "utils/random";
+import { PlayerColor } from "stories/atoms/PlayerColor";
 
 
 function App() {
@@ -19,6 +20,11 @@ function App() {
   const [playClickSfx] = useSound(clickSfx, { volume: 0.3 });
   const [playRobberSfx] = useSound(robberSfx)
 
+  const [playersList, setPlayersList] = useState<{ id: number; name: string; color: PlayerColor }[]>([]);
+  const [showPlayersListModal, setShowPlayersListModal] = useState(false);
+
+  const [currentPlayerIndex, setCurrentPlayerId] = useState(0);
+
   const handleRoll = () => {
     if (isRollButtonDisabled) {
       return;
@@ -27,6 +33,9 @@ function App() {
     setIsRollButtonDisabled(true);
     setShowDice(false);
     setShowRobber(false);
+    if (playersList.length) {
+      setCurrentPlayerId((currentPlayerIndex + 1) % playersList.length);
+    }
 
     setTimeout(() => {
       playRollSfx();
@@ -68,8 +77,17 @@ function App() {
       isRollButtonDisabled={isRollButtonDisabled}
       onRollButtonClick={handleRoll}
       playerIndicatorData={{
-        showPlayerIndicator: false,
+        showPlayerIndicator: playersList.length > 0,
+        currentPlayerName: playersList.length ? playersList[currentPlayerIndex].name : undefined,
+        currentPlayerColor: playersList.length ? playersList[currentPlayerIndex].color : undefined,
+        nextPlayerName: playersList.length ? playersList[(currentPlayerIndex + 1) % playersList.length].name : undefined,
+        nextPlayerColor: playersList.length ? playersList[(currentPlayerIndex + 1) % playersList.length].color : undefined,
       }}
+      showPlayersListModal={showPlayersListModal}
+      onModalClose={() => setShowPlayersListModal(false)}
+      onModalOpen={() => setShowPlayersListModal(true)}
+      playersList={playersList}
+      onPlayersListSave={(players) => setPlayersList(players)}
     />
   );
 }
