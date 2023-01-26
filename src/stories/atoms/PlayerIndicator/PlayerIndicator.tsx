@@ -13,6 +13,13 @@ const Container = styled.div`
   border: 2px solid black;
   border-radius: 4px;
   font-family: Roboto;
+
+  min-width: 350px;
+  min-height: 85px;
+
+  @media only screen and (max-width: 600px) {
+    width: calc(100% - 16px);
+  }
 `;
 
 const CurrentPlayerColor = styled.div<{ color: PlayerColor }>`
@@ -33,6 +40,7 @@ const RightSection = styled.div`
   flex-direction: column;
   border-left: 2px solid black;
   border-right: 2px solid black;
+  flex-grow: 1;
 `;
 
 const SettingsButtonSection = styled.div`

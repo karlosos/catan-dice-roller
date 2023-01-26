@@ -194,6 +194,13 @@ export const PlayersListModal: React.FC<{
     onPlayersListSave(newPlayers);
   };
 
+  const handleMakeFirst = (idx: number) => {
+    const firstHalf = playersList.slice(idx, undefined);
+    const secondHalf = playersList.slice(0, idx)
+    const newPlayers = [...firstHalf, ...secondHalf];
+    onPlayersListSave(newPlayers);
+  }
+
   return (
     <Modal>
       <Container>
@@ -231,9 +238,7 @@ export const PlayersListModal: React.FC<{
                   </Button>
                   <Button onClick={() => handleMoveUp(idx)}>🔼</Button>
                   <Button onClick={() => handleMoveDown(idx)}>🔽</Button>
-                  <Button onClick={() => console.log(">> handleFirst")}>
-                    1️⃣
-                  </Button>
+                  <Button onClick={() => handleMakeFirst(idx)}>1️⃣</Button>
                 </ActionButtons>
               </PlayerRow>
             ))}
