@@ -83,7 +83,7 @@ const PlayerList = styled.div`
 const PlayerRow = styled.div`
   display: grid;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   margin-bottom: 8px;
 `;
 
