@@ -6,6 +6,7 @@ export interface RollerViewProps {
   showDice: boolean,
   showRobber: boolean,
   playerIndicatorData: {
+    isFirstMove?: boolean,
     showPlayerIndicator: boolean,
     currentPlayerName?: string,
     currentPlayerColor?: PlayerColor,

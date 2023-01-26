@@ -24,6 +24,7 @@ export const RollerView: React.FC<RollerViewProps> = ({
 }) => (
   <Container>
     <PlayerIndicator
+      isFirstMove={playerIndicatorData.isFirstMove}
       showPlayerIndicator={playerIndicatorData.showPlayerIndicator}
       handleOpenModal={onModalOpen}
       currentPlayerName={playerIndicatorData.currentPlayerName!}

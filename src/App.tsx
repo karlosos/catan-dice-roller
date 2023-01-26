@@ -24,6 +24,7 @@ function App() {
   const [showPlayersListModal, setShowPlayersListModal] = useState(false);
 
   const [currentPlayerIndex, setCurrentPlayerId] = useState(0);
+  const [isFirstMove, setIsFirstMove] = useState(true);
 
   const handleRoll = () => {
     if (isRollButtonDisabled) {
@@ -33,9 +34,10 @@ function App() {
     setIsRollButtonDisabled(true);
     setShowDice(false);
     setShowRobber(false);
-    if (playersList.length) {
+    if (playersList.length && !isFirstMove) {
       setCurrentPlayerId((currentPlayerIndex + 1) % playersList.length);
     }
+    setIsFirstMove(false);
 
     setTimeout(() => {
       playRollSfx();
@@ -63,6 +65,8 @@ function App() {
 
   const handlePlayersListSave = (players:  {id: number; name: string; color: PlayerColor}[] ) => {
     setPlayersList(players);
+    setCurrentPlayerId(0);
+    setIsFirstMove(true);
   }
 
   useKeyPress(() => {
@@ -81,6 +85,7 @@ function App() {
       isRollButtonDisabled={isRollButtonDisabled}
       onRollButtonClick={handleRoll}
       playerIndicatorData={{
+        isFirstMove: isFirstMove,
         showPlayerIndicator: playersList.length > 0,
         currentPlayerName: playersList.length ? playersList[currentPlayerIndex].name : undefined,
         currentPlayerColor: playersList.length ? playersList[currentPlayerIndex].color : undefined,

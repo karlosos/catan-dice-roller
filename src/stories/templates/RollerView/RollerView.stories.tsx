@@ -58,6 +58,7 @@ WithPlayerIndicator.args = {
   die2: 3,
   showDice: true,
   playerIndicatorData: {
+    isFirstMove: false,
     showPlayerIndicator: true,
     currentPlayerName: "Karol",
     currentPlayerColor: PlayerColor.GREEN,
@@ -74,6 +75,7 @@ WithPlayersListModal.args = {
   die2: 3,
   showDice: true,
   playerIndicatorData: {
+    isFirstMove: false,
     showPlayerIndicator: true,
     currentPlayerName: "Karol",
     currentPlayerColor: PlayerColor.GREEN,

@@ -77,6 +77,7 @@ const NextPlayerColor = styled.div<{ color: PlayerColor }>`
 
 export const PlayerIndicator: React.FC<{
   showPlayerIndicator: boolean;
+  isFirstMove?: boolean;
   currentPlayerName?: string;
   currentPlayerColor?: PlayerColor;
   nextPlayerName?: string;
@@ -84,6 +85,7 @@ export const PlayerIndicator: React.FC<{
   handleOpenModal: () => void;
 }> = ({
   showPlayerIndicator,
+  isFirstMove,
   currentPlayerName,
   currentPlayerColor,
   nextPlayerName,
@@ -96,11 +98,11 @@ export const PlayerIndicator: React.FC<{
         <>
           <CurrentPlayerColor color={currentPlayerColor!} />
           <RightSection>
-            <CurrentPlayerName>{currentPlayerName}</CurrentPlayerName>
+            {!isFirstMove && <CurrentPlayerName>{currentPlayerName}</CurrentPlayerName>}
             <NextPlayerContainer>
-              <NextPlayerLabel>Next roll:</NextPlayerLabel>
-              <NextPlayerName>{nextPlayerName}</NextPlayerName>
-              <NextPlayerColor color={nextPlayerColor!} />
+              <NextPlayerLabel>{isFirstMove ? 'First move:' : 'Next roll:'}</NextPlayerLabel>
+              <NextPlayerName>{isFirstMove ? currentPlayerName : nextPlayerName}</NextPlayerName>
+              <NextPlayerColor color={isFirstMove ? currentPlayerColor! : nextPlayerColor!} />
             </NextPlayerContainer>
           </RightSection>
         </>
