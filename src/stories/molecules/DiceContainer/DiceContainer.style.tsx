@@ -50,6 +50,10 @@ export const DiceContainerStyled = styled.div`
   @media only screen and (max-width: 600px) {
     transform: scale(0.7);
   }
+
+  @media only screen and (max-width: 300px) {
+    transform: scale(0.5);
+  }
 `;
 
 export const Die1Styled = styled.div<{ animationName: Keyframes }>`

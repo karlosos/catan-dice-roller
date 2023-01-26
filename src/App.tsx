@@ -7,6 +7,7 @@ import robberSfx from "stories/assets/robber_normalized.ogg";
 import useSound from "use-sound";
 import { DIE_FACES } from "utils/consts";
 import { randomValueFromArray } from "utils/random";
+import { PlayerColor } from "stories/atoms/PlayerColor";
 
 function App() {
   const [die1, setDie1] = useState(1);
@@ -18,6 +19,12 @@ function App() {
   const [playClickSfx] = useSound(clickSfx, { volume: 0.3 });
   const [playRobberSfx] = useSound(robberSfx);
 
+  const [playersList, setPlayersList] = useState<{ id: number; name: string; color: PlayerColor }[]>([]);
+  const [showPlayersListModal, setShowPlayersListModal] = useState(false);
+
+  const [currentPlayerIndex, setCurrentPlayerId] = useState(0);
+  const [isFirstMove, setIsFirstMove] = useState(true);
+
   const handleRoll = () => {
     if (isRollButtonDisabled) {
       return;
@@ -26,6 +33,10 @@ function App() {
     setIsRollButtonDisabled(true);
     setShowDice(false);
     setShowRobber(false);
+    if (playersList.length && !isFirstMove) {
+      setCurrentPlayerId((currentPlayerIndex + 1) % playersList.length);
+    }
+    setIsFirstMove(false);
 
     setTimeout(() => {
       playRollSfx();
@@ -51,8 +62,14 @@ function App() {
     }, 500);
   };
 
+  const handlePlayersListSave = (players:  {id: number; name: string; color: PlayerColor}[] ) => {
+    setPlayersList(players);
+    setCurrentPlayerId(0);
+    setIsFirstMove(true);
+  }
+
   useKeyPress(() => {
-    if (!isRollButtonDisabled) {
+    if (!isRollButtonDisabled && !showPlayersListModal) {
       playClickSfx();
       handleRoll();
     }
@@ -66,6 +83,19 @@ function App() {
       showRobber={showRobber}
       isRollButtonDisabled={isRollButtonDisabled}
       onRollButtonClick={handleRoll}
+      playerIndicatorData={{
+        isFirstMove: isFirstMove,
+        showPlayerIndicator: playersList.length > 0,
+        currentPlayerName: playersList.length ? playersList[currentPlayerIndex].name : undefined,
+        currentPlayerColor: playersList.length ? playersList[currentPlayerIndex].color : undefined,
+        nextPlayerName: playersList.length ? playersList[(currentPlayerIndex + 1) % playersList.length].name : undefined,
+        nextPlayerColor: playersList.length ? playersList[(currentPlayerIndex + 1) % playersList.length].color : undefined,
+      }}
+      showPlayersListModal={showPlayersListModal}
+      onModalClose={() => setShowPlayersListModal(false)}
+      onModalOpen={() => setShowPlayersListModal(true)}
+      playersList={playersList}
+      onPlayersListSave={(players) => handlePlayersListSave(players)}
     />
   );
 }
