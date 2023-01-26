@@ -212,11 +212,11 @@ export const PlayersListModal: React.FC<{
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <line x1="18" y1="6" x2="6" y2="18" />
@@ -227,7 +227,7 @@ export const PlayersListModal: React.FC<{
           <HeaderDivider />
           <PlayerList>
             {playersList.map((player, idx) => (
-              <PlayerRow>
+              <PlayerRow key={player.id}>
                 <RowLeft>
                   <PlayerColorStyled color={player.color} />
                   <PlayerName>{player.name}</PlayerName>
@@ -262,8 +262,8 @@ export const PlayersListModal: React.FC<{
                   key={playerColor}
                   value={playerColor}
                   usedPlayerColors={usedPlayerColors}
-                  onChange={(playerColor: PlayerColor) =>
-                    setPlayerColor(playerColor)
+                  onChange={(newPlayerColor: PlayerColor) =>
+                    setPlayerColor(newPlayerColor)
                   }
                 />
               </FormRow>
@@ -299,7 +299,7 @@ const SelectPlayerColor: React.FC<{
     >
       <option disabled selected style={{ display: "none" }}></option>
       {availableColors.map((color) => (
-        <option value={color.color}>{color.label}</option>
+        <option value={color.color} key={color.color}>{color.label}</option>
       ))}
     </Select>
   );
