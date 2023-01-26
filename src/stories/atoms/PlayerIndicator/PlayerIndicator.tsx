@@ -43,6 +43,9 @@ const SettingsButtonSection = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 22px;
+  &:hover {
+    backdrop-filter: brightness(1.25);
+  }
 `;
 
 const CurrentPlayerName = styled.div`
@@ -95,14 +98,14 @@ export const PlayerIndicator: React.FC<{
           <RightSection>
             <CurrentPlayerName>{currentPlayerName}</CurrentPlayerName>
             <NextPlayerContainer>
-              <NextPlayerLabel>Next player:</NextPlayerLabel>
+              <NextPlayerLabel>Next roll:</NextPlayerLabel>
               <NextPlayerName>{nextPlayerName}</NextPlayerName>
               <NextPlayerColor color={nextPlayerColor!} />
             </NextPlayerContainer>
           </RightSection>
         </>
       )}
-      <SettingsButtonSection onClick={handleOpenModal}>⚙️</SettingsButtonSection>
+      <SettingsButtonSection onClick={handleOpenModal}>{showPlayerIndicator ? "⚙️" : "Configure Players 👨"}</SettingsButtonSection>
     </Container>
   );
 };

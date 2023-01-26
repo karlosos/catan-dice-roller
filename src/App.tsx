@@ -61,8 +61,12 @@ function App() {
     }, 500);
   };
 
+  const handlePlayersListSave = (players:  {id: number; name: string; color: PlayerColor}[] ) => {
+    setPlayersList(players);
+  }
+
   useKeyPress(() => {
-    if (!isRollButtonDisabled) {
+    if (!isRollButtonDisabled && !showPlayersListModal) {
       playClickSfx();
       handleRoll();
     }
@@ -87,7 +91,7 @@ function App() {
       onModalClose={() => setShowPlayersListModal(false)}
       onModalOpen={() => setShowPlayersListModal(true)}
       playersList={playersList}
-      onPlayersListSave={(players) => setPlayersList(players)}
+      onPlayersListSave={(players) => handlePlayersListSave(players)}
     />
   );
 }
