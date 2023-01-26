@@ -1,2 +1,2 @@
 export { PrimaryButton } from "./PrimaryButton";
-export { Die } from "./Die"
+export { Die } from "./Die";

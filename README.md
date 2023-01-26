@@ -4,6 +4,8 @@
 
 [![Code style: prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg)](https://standardjs.com/)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
+![Language: Typescript](https://img.shields.io/badge/language-typescript-blue)
+[![CI](https://github.com/karlosos/catan-dice-roller/actions/workflows/CI.yaml/badge.svg)](https://github.com/karlosos/catan-dice-roller/actions/workflows/CI.yaml)
 
 </div>
 
@@ -33,9 +35,9 @@ Application: <b><a href="https://catan-dice-roller.vercel.app/">catan-dice-rolle
 
 If you don't have dice or enough space on the table use Catan Dice Roller. This web/mobile application will throw two dice for you and notify you when the robber is rolled same as in Catan Universe. The app has sounds 🔊 and cool animations 💫. Check it [here](https://catan-dice-roller.vercel.app/).
 
-App was created using React. This is a PWA, you can install it and use the app offline. 
+App was created using React. This is a PWA, you can install it and use the app offline.
 
-## Roadmap 
+## Roadmap
 
 1. Defining user list (randomly select starti player, show who has the turn).
 2. Statistics view. Show how many times each number was rolled.
@@ -52,6 +54,10 @@ You will need Node v16.13.1. I suggest using `nvm` for managing your node versio
 Storybook can be launched with `npm run storybook`.
 
 Code coverage can be checked using `npm run test:coverage`.
+
+To format code run `npm run format`.
+
+To perform static code analysis run `npm run lint`.
 
 ## Deployment
 

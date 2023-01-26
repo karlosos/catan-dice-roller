@@ -1,16 +1,16 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const DieStyled = styled.div`
   width: 150px;
   height: 150px;
-  background-color: #D5D3D8;
+  background-color: #d5d3d8;
   border-radius: 10px;
   border: 2px solid #272527;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 `;
 
 export const Inner = styled.div`
-  background-color: #FFFDFE;
+  background-color: #fffdfe;
   border-radius: 40px;
   width: 100%;
   height: 100%;

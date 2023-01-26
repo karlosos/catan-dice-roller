@@ -9,7 +9,6 @@ import { DIE_FACES } from "utils/consts";
 import { randomValueFromArray } from "utils/random";
 import { PlayerColor } from "stories/atoms/PlayerColor";
 
-
 function App() {
   const [die1, setDie1] = useState(1);
   const [die2, setDie2] = useState(1);
@@ -18,7 +17,7 @@ function App() {
   const [isRollButtonDisabled, setIsRollButtonDisabled] = useState(false);
   const [playRollSfx] = useSound(rollSfx);
   const [playClickSfx] = useSound(clickSfx, { volume: 0.3 });
-  const [playRobberSfx] = useSound(robberSfx)
+  const [playRobberSfx] = useSound(robberSfx);
 
   const [playersList, setPlayersList] = useState<{ id: number; name: string; color: PlayerColor }[]>([]);
   const [showPlayersListModal, setShowPlayersListModal] = useState(false);
@@ -41,8 +40,8 @@ function App() {
 
     setTimeout(() => {
       playRollSfx();
-      const die1Value = randomValueFromArray(DIE_FACES)
-      const die2Value = randomValueFromArray(DIE_FACES)
+      const die1Value = randomValueFromArray(DIE_FACES);
+      const die2Value = randomValueFromArray(DIE_FACES);
       setDie1(die1Value);
       setDie2(die2Value);
       setShowDice(true);
@@ -54,7 +53,7 @@ function App() {
           playRobberSfx();
           setShowRobber(true);
         }
-      }, 1500)
+      }, 1500);
 
       // Enable button again after cooldown
       setTimeout(() => {
