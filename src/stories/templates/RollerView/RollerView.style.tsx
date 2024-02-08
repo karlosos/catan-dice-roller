@@ -23,10 +23,16 @@ export const Container = styled.div`
   ${backgroundCss};
 `;
 
-export const ButtonContainer = styled.div`
-  margin-bottom: 50px;
-
+export const BottomContainer = styled.div`
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
   @media only screen and (max-width: 600px) {
     transform: scale(0.5);
   }
+`;
+
+export const ButtonWrapper = styled.div`
+  padding: 20px;
 `;
