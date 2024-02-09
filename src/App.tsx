@@ -7,8 +7,12 @@ import robberSfx from "stories/assets/robber_normalized.ogg";
 import useSound from "use-sound";
 import { DIE_FACES } from "utils/consts";
 import { randomValueFromArray } from "utils/random";
+import { useWakeLock } from "utils/use-wake-lock";
+
 
 function App() {
+  useWakeLock();
+
   const [die1, setDie1] = useState(1);
   const [die2, setDie2] = useState(1);
   const [showDice, setShowDice] = useState(false);
