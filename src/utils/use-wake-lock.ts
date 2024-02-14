@@ -12,7 +12,7 @@ export const useWakeLock = () => {
       currentWakeLock.current = await navigator.wakeLock.request("screen");
       console.log("Wake lock enabled");
     } catch (err) {
-      alert(err);
+      console.log(err);
     }
   };
 
