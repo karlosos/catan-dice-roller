@@ -6,11 +6,6 @@ import { DiceContainer } from "./DiceContainer";
 export default {
   title: "molecules/DiceContainer",
   component: DiceContainer,
-  argTypes: {
-    die1: { control: "number", min: 1, max: 6 },
-    die2: { control: "number", min: 1, max: 6 },
-    showDice: Boolean,
-  },
 } as ComponentMeta<typeof DiceContainer>;
 
 const Wrapper = styled.div`
