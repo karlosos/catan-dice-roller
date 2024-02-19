@@ -1,4 +1,4 @@
-import { Die } from "stories/atoms";
+import { Die } from "ui/atoms";
 import {
   Die1Styled,
   Die2Styled,
@@ -11,7 +11,7 @@ import {
   slideTopNumberToken,
   scaleDownNumberToken,
 } from "./DiceContainer.style";
-import { NumberToken } from "stories/atoms/NumberToken";
+import { NumberToken } from "ui/atoms/NumberToken";
 
 export const DiceContainer: React.FC<{
   die1: number;

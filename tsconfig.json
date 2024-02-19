@@ -16,9 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
-    "paths": {
-      "@stories": ["./src/stories/*"]
-    },
     "types": ["dom-screen-wake-lock"]
   },
   "include": ["src"]

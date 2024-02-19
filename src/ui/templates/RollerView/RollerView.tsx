@@ -1,5 +1,5 @@
-import { Robber } from "stories/atoms/Robber";
-import { DiceContainer } from "stories/molecules/DiceContainer";
+import { Robber } from "ui/atoms/Robber";
+import { DiceContainer } from "ui/molecules/DiceContainer";
 import styled from "styled-components";
 
 import {
@@ -8,7 +8,7 @@ import {
   Container,
 } from "./RollerView.style";
 import { RollerViewProps } from "./types";
-import { PrimaryButton } from "stories/atoms";
+import { PrimaryButton } from "ui/atoms";
 
 export const RollerView: React.FC<RollerViewProps> = ({
   die1,

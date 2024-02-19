@@ -1,14 +1,13 @@
 import { useKeyPress } from "hooks/useKeyPress";
 import { useState } from "react";
-import { RollerView } from "stories/templates/RollerView";
-import clickSfx from "stories/assets/click.ogg";
-import rollSfx from "stories/assets/dice_roll.ogg";
-import robberSfx from "stories/assets/robber_normalized.ogg";
+import { RollerView } from "ui/templates/RollerView";
+import clickSfx from "./ui/assets/click.ogg";
+import rollSfx from "./ui/assets/dice_roll.ogg";
+import robberSfx from "./ui/assets/robber_normalized.ogg";
 import useSound from "use-sound";
 import { DIE_FACES } from "utils/consts";
 import { randomValueFromArray } from "utils/random";
 import { useWakeLock } from "utils/use-wake-lock";
-
 
 function App() {
   useWakeLock();
