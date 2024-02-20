@@ -2,11 +2,7 @@ import { Robber } from "ui/atoms/Robber";
 import { DiceContainer } from "ui/molecules/DiceContainer";
 import styled from "styled-components";
 
-import {
-  BottomContainer,
-  ButtonWrapper,
-  Container,
-} from "./RollerView.style";
+import { BottomContainer, ButtonWrapper, Container } from "./RollerView.style";
 import { RollerViewProps } from "./types";
 import { PrimaryButton } from "ui/atoms";
 

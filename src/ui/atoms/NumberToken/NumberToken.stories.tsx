@@ -8,7 +8,9 @@ export default {
   component: NumberToken,
 } as ComponentMeta<typeof NumberToken>;
 
-const Template: ComponentStory<typeof NumberToken> = (args) => <NumberToken {...args} />;
+const Template: ComponentStory<typeof NumberToken> = (args) => (
+  <NumberToken {...args} />
+);
 
 export const Primary = Template.bind({});
 
