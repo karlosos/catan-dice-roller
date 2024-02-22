@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import { RollerView } from "../RollerView";
 import { testId } from "testUtils/testId";

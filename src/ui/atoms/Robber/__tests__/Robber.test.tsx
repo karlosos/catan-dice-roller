@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Robber } from "../Robber";
 import { testId } from "testUtils/testId";
