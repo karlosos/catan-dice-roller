@@ -7,7 +7,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,13 +18,26 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks"
+  ],
   "rules": {
     "react/prop-types": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ],
     "no-use-before-define": "off",
-    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -33,6 +47,9 @@
   "settings": {
     "import/resolver": {
       "typescript": {}
+    },
+    "react": {
+      "version": "detect"
     }
   }
 }
