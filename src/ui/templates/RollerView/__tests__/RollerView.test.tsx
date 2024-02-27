@@ -4,7 +4,7 @@ import { testId } from "testUtils/testId";
 import userEvent from "@testing-library/user-event";
 
 describe("RollerView Component", () => {
-  it("WHEN clicked on button THEN handler is called", () => {
+  it("WHEN clicked on button THEN handler is called", async () => {
     // GIVEN
     const onButtonClick = jest.fn();
     render(
@@ -19,13 +19,13 @@ describe("RollerView Component", () => {
     );
 
     // WHEN
-    userEvent.click(screen.getByTestId(testId.primaryButton));
+    await userEvent.click(screen.getByTestId(testId.primaryButton));
 
     // THEN
-    expect(onButtonClick).toBeCalled();
+    expect(onButtonClick).toHaveBeenCalled();
   });
 
-  it("GIVEN roll button disabled WHEN clicked on button THEN handler is not called", () => {
+  it("GIVEN roll button disabled WHEN clicked on button THEN handler is not called", async () => {
     // GIVEN
     const onButtonClick = jest.fn();
     render(
@@ -40,9 +40,9 @@ describe("RollerView Component", () => {
     );
 
     // WHEN
-    userEvent.click(screen.getByTestId(testId.primaryButton));
+    await userEvent.click(screen.getByTestId(testId.primaryButton));
 
     // THEN
-    expect(onButtonClick).not.toBeCalled();
+    expect(onButtonClick).not.toHaveBeenCalled();
   });
 });
