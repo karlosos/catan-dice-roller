@@ -13,7 +13,7 @@ describe("NumberToken Component", () => {
       const pips = screen.getAllByTestId(testId.numberTokenPip);
       expect(pips.length).toBeGreaterThan(0);
       expect(pips.length).toBeLessThan(6);
-    }
+    },
   );
 
   test.each([0, 1, 7, 13, 999, -100])(
@@ -25,6 +25,6 @@ describe("NumberToken Component", () => {
       // THEN
       const pips = screen.queryByTestId(testId.numberTokenPip);
       expect(pips).not.toBeInTheDocument();
-    }
+    },
   );
 });

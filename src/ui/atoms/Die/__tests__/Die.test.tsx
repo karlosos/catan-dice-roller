@@ -12,7 +12,7 @@ describe("Die Component", () => {
       // THEN
       const pips = screen.getAllByTestId(testId.pip);
       expect(pips).toHaveLength(value);
-    }
+    },
   );
 
   test.each([0, 7, 999, -100])(
@@ -24,6 +24,6 @@ describe("Die Component", () => {
       // THEN
       const pips = screen.queryByTestId(testId.pip);
       expect(pips).not.toBeInTheDocument();
-    }
+    },
   );
 });

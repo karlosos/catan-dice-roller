@@ -10,7 +10,7 @@ describe("PrimaryButton", () => {
     render(
       <PrimaryButton onClick={handleButtonClick} isDisabled={false}>
         Button
-      </PrimaryButton>
+      </PrimaryButton>,
     );
 
     // WHEN
@@ -26,7 +26,7 @@ describe("PrimaryButton", () => {
     render(
       <PrimaryButton onClick={handleButtonClick} isDisabled={true}>
         Button
-      </PrimaryButton>
+      </PrimaryButton>,
     );
 
     // WHEN

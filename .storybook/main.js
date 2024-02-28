@@ -18,15 +18,15 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/preset-create-react-app",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
   ],
 
   framework: {
     name: "@storybook/react-webpack5",
-    options: {}
+    options: {},
   },
 
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };

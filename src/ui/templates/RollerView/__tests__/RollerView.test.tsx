@@ -15,7 +15,7 @@ describe("RollerView Component", () => {
         showRobber={false}
         onRollButtonClick={onButtonClick}
         isRollButtonDisabled={false}
-      />
+      />,
     );
 
     // WHEN
@@ -36,7 +36,7 @@ describe("RollerView Component", () => {
         showRobber={false}
         onRollButtonClick={onButtonClick}
         isRollButtonDisabled={true}
-      />
+      />,
     );
 
     // WHEN

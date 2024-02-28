@@ -32,7 +32,9 @@ export const Pip = styled.div`
   height: 24px;
   border-radius: 50%;
   background-color: #272527;
-  box-shadow: inset 0 3px #111, inset 0 -3px #555;
+  box-shadow:
+    inset 0 3px #111,
+    inset 0 -3px #555;
 
   &:nth-child(2) {
     grid-area: b;
