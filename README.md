@@ -33,7 +33,7 @@ Application: <b><a href="https://catan-dice-roller.vercel.app/">catan-dice-rolle
 
 ## About
 
-If you don't have dice or enough space on the table use Catan Dice Roller. This web/mobile application will throw two dice for you and notify you when the robber is rolled same as in Catan Universe. The app has sounds 🔊 and cool animations 💫. Check it [here](https://catan-dice-roller.vercel.app/).
+If you don't have dice or enough space on the table use Catan Dice Roller. This web/mobile application will throw two dice for you and notify you when the robber is rolled same as in Catan Universe. The app has sounds 🔊 and cool animations 💫. Check it out [here](https://catan-dice-roller.vercel.app/).
 
 App was created using React. This is a PWA, you can install it and use the app offline.
 
@@ -41,11 +41,11 @@ App was created using React. This is a PWA, you can install it and use the app o
 
 1. Defining user list (randomly select starti player, show who has the turn).
 2. Statistics view. Show how many times each number was rolled.
-3. Alternative random generator. Similar to Catan Universe.
+3. Alternative random generator (card stack). Similar to Catan Universe.
 
 ## Development
 
-You will need Node v16.13.1. I suggest using `nvm` for managing your node versions.
+You will need Node v20. I suggest using `nvm` for managing your node versions.
 
 1. Install dependencies with `npm install`.
 1. Run desktop application with `npm run start` or react app with `npm run react-start`.
@@ -61,4 +61,4 @@ To perform static code analysis run `npm run lint`.
 
 ## Deployment
 
-Application is automatically deployed to GithubPages using `.github/workflows/main.yml` workflow.
+Application is automatically deployed to vercel under [catan-dice-roller.vercel.app](https://catan-dice-roller.vercel.app/).
