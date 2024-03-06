@@ -1,4 +1,4 @@
-import styled, { css, Keyframes, keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const slideTop1 = keyframes`
   0% {
@@ -52,11 +52,11 @@ export const DiceContainerStyled = styled.div`
   }
 `;
 
-export const Die1Styled = styled.div<{ animationName: Keyframes }>`
-  animation-name: ${(props) => props.animationName};
+export const Die1Styled = styled.div<{ animationName: "in" | "out" }>`
   ${(props) => {
-    if (props.animationName === scaleDown1) {
+    if (props.animationName === "out") {
       return css`
+        animation-name: ${scaleDown1};
         animation-duration: 0.2s;
         animation-iteration-count: 1;
         animation-timing-function: linear;
@@ -64,6 +64,7 @@ export const Die1Styled = styled.div<{ animationName: Keyframes }>`
       `;
     } else {
       return css`
+        animation-name: ${slideTop1};
         animation-duration: 1.5s;
         animation-iteration-count: 1;
         animation-timing-function: cubic-bezier(0, 0.4, 0.085, 1);
@@ -73,11 +74,11 @@ export const Die1Styled = styled.div<{ animationName: Keyframes }>`
   }}
 `;
 
-export const Die2Styled = styled.div<{ animationName: Keyframes }>`
-  animation-name: ${(props) => props.animationName};
+export const Die2Styled = styled.div<{ animationName: "in" | "out" }>`
   ${(props) => {
-    if (props.animationName === scaleDown2) {
+    if (props.animationName === "out") {
       return css`
+        animation-name: ${scaleDown2};
         animation-duration: 0.2s;
         animation-iteration-count: 1;
         animation-timing-function: linear;
@@ -85,6 +86,7 @@ export const Die2Styled = styled.div<{ animationName: Keyframes }>`
       `;
     } else {
       return css`
+        animation-name: ${slideTop2};
         animation-duration: 1.5s;
         animation-iteration-count: 1;
         animation-timing-function: cubic-bezier(0, 0.53, 0.09, 1);
@@ -117,17 +119,17 @@ export const scaleDownNumberToken = keyframes`
   }
 `;
 
-export const NumberTokenContainer = styled.div<{ animationName: Keyframes }>`
+export const NumberTokenContainer = styled.div<{ animationName: "in" | "out" }>`
   position: fixed;
   top: 50%;
   left: 50%;
   top: 30px;
   opacity: 0;
 
-  animation-name: ${(props) => props.animationName};
   ${(props) => {
-    if (props.animationName === scaleDownNumberToken) {
+    if (props.animationName === "out") {
       return css`
+        animation-name: ${scaleDownNumberToken};
         animation-duration: 0.2s;
         animation-iteration-count: 1;
         animation-timing-function: linear;
@@ -135,6 +137,7 @@ export const NumberTokenContainer = styled.div<{ animationName: Keyframes }>`
       `;
     } else {
       return css`
+        animation-name: ${slideTopNumberToken};
         animation-delay: 1.5s;
         animation-duration: 0.5s;
         animation-iteration-count: 1;

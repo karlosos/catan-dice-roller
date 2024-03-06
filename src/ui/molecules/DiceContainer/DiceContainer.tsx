@@ -3,13 +3,7 @@ import {
   Die1Styled,
   Die2Styled,
   DiceContainerStyled,
-  scaleDown1,
-  scaleDown2,
-  slideTop1,
-  slideTop2,
   NumberTokenContainer,
-  slideTopNumberToken,
-  scaleDownNumberToken,
 } from "./DiceContainer.style";
 import { NumberToken } from "ui/atoms/NumberToken";
 
@@ -21,16 +15,14 @@ export const DiceContainer: React.FC<{
   return (
     <>
       <DiceContainerStyled>
-        <Die1Styled animationName={showDice ? slideTop1 : scaleDown1}>
+        <Die1Styled animationName={showDice ? "in" : "out"}>
           <Die value={die1} />
         </Die1Styled>
-        <Die2Styled animationName={showDice ? slideTop2 : scaleDown2}>
+        <Die2Styled animationName={showDice ? "in" : "out"}>
           <Die value={die2} />
         </Die2Styled>
 
-        <NumberTokenContainer
-          animationName={showDice ? slideTopNumberToken : scaleDownNumberToken}
-        >
+        <NumberTokenContainer animationName={showDice ? "in" : "out"}>
           <NumberToken value={die1 + die2} />
         </NumberTokenContainer>
       </DiceContainerStyled>

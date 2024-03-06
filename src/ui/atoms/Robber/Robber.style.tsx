@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const scaleDown = keyframes`
   0% {
@@ -9,6 +9,14 @@ export const scaleDown = keyframes`
     opacity: 0;
   }
 `;
+
+export const animationOut = css`
+  animation-name: ${scaleDown};
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+`
 
 export const scaleUp = keyframes`
   0% {
@@ -21,6 +29,14 @@ export const scaleUp = keyframes`
   }
 `;
 
+export const animationIn = css`
+  animation-name: ${scaleUp};
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.4, 0.085, 1);
+  animation-fill-mode: both;
+`
+
 export const RobberContainer = styled.div`
   grid-area: 1 / 1;
   display: flex;
@@ -32,4 +48,14 @@ export const RobberContainer = styled.div`
   @media only screen and (max-width: 600px) {
     transform: scale(0.7);
   }
+`;
+
+export const RobberStyled = styled.img<{ animationDirection: "in" | "out" }>`
+  ${(props) => {
+    if (props.animationDirection === "in") {
+      return animationIn;
+    } else {
+      return animationOut;
+    }
+  }}
 `;
