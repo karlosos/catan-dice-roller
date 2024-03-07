@@ -1,4 +1,3 @@
-// Replace react-vite with the framework you are using (e.g., react-webpack5)
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
@@ -14,9 +13,10 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
   ],
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-    docs: {
+  docs: {
     autodocs: true,
   },
+  staticDirs: ['../public'],
 };
 
 export default config;
