@@ -119,7 +119,9 @@ export const scaleDownNumberToken = keyframes`
   }
 `;
 
-export const NumberTokenContainer = styled.div<{ $animationName: "in" | "out" }>`
+export const NumberTokenContainer = styled.div<{
+  $animationName: "in" | "out";
+}>`
   position: fixed;
   top: 50%;
   left: 50%;
