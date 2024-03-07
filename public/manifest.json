@@ -1,6 +1,7 @@
 {
-  "short_name": "Catan Dice Roller",
-  "name": "Catan Dice Roller",
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "short_name": "Catan Dice Roller JSON",
+  "name": "Catan Dice Roller JSON",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme-color": "#FFA60A",
+  "theme_color": "#FFA60A",
   "background_color": "#FFA80C"
 }

@@ -11,7 +11,10 @@ export default defineConfig(() => {
     plugins: [
       react(),
       viteTsconfigPaths(),
-      VitePWA({ registerType: "autoUpdate" }),
+      VitePWA({
+        registerType: "autoUpdate",
+        manifest: false,
+      }),
     ],
     test: {
       globals: true,
