@@ -1,6 +1,7 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { RollerView } from "./RollerView";
 import styled from "styled-components";
+import { RollerViewProps } from "ui/templates/RollerView/types";
 
 export default {
   title: "templates/RollerView",
@@ -9,14 +10,14 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof RollerView>;
+} as Meta<typeof RollerView>;
 
 const StoryWrapper = styled.div`
   position: relative;
   height: 100vh;
 `;
 
-const Template: ComponentStory<typeof RollerView> = (args) => {
+const Template: StoryFn<typeof RollerView> = (args: RollerViewProps) => {
   return (
     <StoryWrapper>
       <RollerView {...args} />

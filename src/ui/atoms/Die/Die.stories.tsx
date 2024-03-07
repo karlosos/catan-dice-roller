@@ -1,13 +1,13 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
-import { Die } from "./Die";
+import { Die, DieProps } from "./Die";
 
 export default {
   title: "atoms/Die",
   component: Die,
-} as ComponentMeta<typeof Die>;
+} as Meta<typeof Die>;
 
-const Template: ComponentStory<typeof Die> = (args) => <Die {...args} />;
+const Template: StoryFn<typeof Die> = (args: DieProps) => <Die {...args} />;
 
 export const Primary = Template.bind({});
 

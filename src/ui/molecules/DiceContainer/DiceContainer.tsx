@@ -7,11 +7,17 @@ import {
 } from "./DiceContainer.style";
 import { NumberToken } from "ui/atoms/NumberToken";
 
-export const DiceContainer: React.FC<{
+export interface DiceContainerProps {
   die1: number;
   die2: number;
   showDice: boolean;
-}> = ({ die1, die2, showDice }) => {
+}
+
+export const DiceContainer: React.FC<DiceContainerProps> = ({
+  die1,
+  die2,
+  showDice,
+}) => {
   return (
     <>
       <DiceContainerStyled>

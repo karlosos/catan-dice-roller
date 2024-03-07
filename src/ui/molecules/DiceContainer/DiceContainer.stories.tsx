@@ -1,18 +1,18 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import styled from "styled-components";
 
-import { DiceContainer } from "./DiceContainer";
+import { DiceContainer, DiceContainerProps } from "./DiceContainer";
 
 export default {
   title: "molecules/DiceContainer",
   component: DiceContainer,
-} as ComponentMeta<typeof DiceContainer>;
+} as Meta<typeof DiceContainer>;
 
 const Wrapper = styled.div`
   margin-top: 100px;
 `;
 
-const Template: ComponentStory<typeof DiceContainer> = (args) => (
+const Template: StoryFn<typeof DiceContainer> = (args: DiceContainerProps) => (
   <Wrapper>
     <DiceContainer {...args} />
   </Wrapper>

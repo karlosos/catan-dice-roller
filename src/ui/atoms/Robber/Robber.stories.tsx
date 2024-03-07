@@ -1,13 +1,15 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
-import { Robber } from "./Robber";
+import { Robber, RobberProps } from "./Robber";
 
 export default {
   title: "atoms/Robber",
   component: Robber,
-} as ComponentMeta<typeof Robber>;
+} as Meta<typeof Robber>;
 
-const Template: ComponentStory<typeof Robber> = (args) => <Robber {...args} />;
+const Template: StoryFn<typeof Robber> = (args: RobberProps) => (
+  <Robber {...args} />
+);
 
 export const Primary = Template.bind({});
 

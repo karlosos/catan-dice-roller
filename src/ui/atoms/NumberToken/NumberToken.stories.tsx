@@ -1,13 +1,13 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
-import { NumberToken } from "./NumberToken";
+import { NumberToken, NumberTokenProps } from "./NumberToken";
 
 export default {
   title: "atoms/NumberToken",
   component: NumberToken,
-} as ComponentMeta<typeof NumberToken>;
+} as Meta<typeof NumberToken>;
 
-const Template: ComponentStory<typeof NumberToken> = (args) => (
+const Template: StoryFn<typeof NumberToken> = (args: NumberTokenProps) => (
   <NumberToken {...args} />
 );
 

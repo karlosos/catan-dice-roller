@@ -1,7 +1,11 @@
 import { testId } from "testUtils/testId";
 import { Pip, Pips, Token, TextValue } from "./NumberToken.style";
 
-export const NumberToken = ({ value }: { value: number }) => {
+export interface NumberTokenProps {
+  value: number;
+}
+
+export const NumberToken = ({ value }: NumberTokenProps) => {
   const isRed = value === 8 || value === 6;
 
   return (

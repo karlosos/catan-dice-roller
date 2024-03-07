@@ -2,7 +2,11 @@ import { testId } from "testUtils/testId";
 import robberSrc from "../../assets/robber.png";
 import { RobberContainer, RobberStyled } from "./Robber.style";
 
-export const Robber: React.FC<{ showRobber?: boolean }> = ({ showRobber }) => {
+export interface RobberProps {
+  showRobber?: boolean;
+}
+
+export const Robber: React.FC<RobberProps> = ({ showRobber }) => {
   const animationDirection = showRobber ? "in" : "out";
   return (
     <RobberContainer>

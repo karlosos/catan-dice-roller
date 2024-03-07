@@ -2,7 +2,11 @@ import React from "react";
 import { testId } from "testUtils/testId";
 import { DieStyled, Inner, Pip } from "./Die.style";
 
-export const Die: React.FC<{ value: number }> = ({ value }) => {
+export interface DieProps {
+  value: number;
+}
+
+export const Die: React.FC<DieProps> = ({ value }) => {
   const pips =
     Number.isInteger(value) && value > 0 && value < 7
       ? Array(value)
