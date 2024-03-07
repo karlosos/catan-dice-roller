@@ -2,11 +2,12 @@ import { render, screen } from "@testing-library/react";
 import { RollerView } from "../RollerView";
 import { testId } from "testUtils/testId";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 
 describe("RollerView Component", () => {
   it("WHEN clicked on button THEN handler is called", async () => {
     // GIVEN
-    const onButtonClick = jest.fn();
+    const onButtonClick = vi.fn();
     render(
       <RollerView
         die1={1}
@@ -27,7 +28,7 @@ describe("RollerView Component", () => {
 
   it("GIVEN roll button disabled WHEN clicked on button THEN handler is not called", async () => {
     // GIVEN
-    const onButtonClick = jest.fn();
+    const onButtonClick = vi.fn();
     render(
       <RollerView
         die1={1}

@@ -9,7 +9,7 @@ const buttonBackground = css`
   background-image: url(${backgroundSprite});
 `;
 
-export const ButtonStyled = styled.div<{ isDisabled?: boolean }>`
+export const ButtonStyled = styled.div<{ $isDisabled?: boolean }>`
   user-select: none;
   position: relative;
   width: 380px;
@@ -22,7 +22,7 @@ export const ButtonStyled = styled.div<{ isDisabled?: boolean }>`
   text-align: center;
 
   ${(props) =>
-    props.isDisabled &&
+    props.$isDisabled &&
     css`
       cursor: not-allowed;
       filter: grayscale(80%);
@@ -32,7 +32,7 @@ export const ButtonStyled = styled.div<{ isDisabled?: boolean }>`
   transition-delay: 0.1s;
 `;
 
-export const BackgroundHover = styled.div<{ isDisabled?: boolean }>`
+export const BackgroundHover = styled.div<{ $isDisabled?: boolean }>`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -42,7 +42,7 @@ export const BackgroundHover = styled.div<{ isDisabled?: boolean }>`
   opacity: 0;
 
   ${(props) =>
-    !props.isDisabled &&
+    !props.$isDisabled &&
     css`
       &:hover {
         opacity: 1;

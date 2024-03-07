@@ -50,9 +50,9 @@ export const RobberContainer = styled.div`
   }
 `;
 
-export const RobberStyled = styled.img<{ animationDirection: "in" | "out" }>`
+export const RobberStyled = styled.img<{ $animationDirection: "in" | "out" }>`
   ${(props) => {
-    if (props.animationDirection === "in") {
+    if (props.$animationDirection === "in") {
       return animationIn;
     } else {
       return animationOut;

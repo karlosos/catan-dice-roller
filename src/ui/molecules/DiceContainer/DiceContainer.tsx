@@ -15,14 +15,14 @@ export const DiceContainer: React.FC<{
   return (
     <>
       <DiceContainerStyled>
-        <Die1Styled animationName={showDice ? "in" : "out"}>
+        <Die1Styled $animationName={showDice ? "in" : "out"}>
           <Die value={die1} />
         </Die1Styled>
-        <Die2Styled animationName={showDice ? "in" : "out"}>
+        <Die2Styled $animationName={showDice ? "in" : "out"}>
           <Die value={die2} />
         </Die2Styled>
 
-        <NumberTokenContainer animationName={showDice ? "in" : "out"}>
+        <NumberTokenContainer $animationName={showDice ? "in" : "out"}>
           <NumberToken value={die1 + die2} />
         </NumberTokenContainer>
       </DiceContainerStyled>

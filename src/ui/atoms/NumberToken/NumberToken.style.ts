@@ -17,7 +17,7 @@ export const Token = styled.div`
     0 0 6px rgb(92 26 4 / 51%);
 `;
 
-export const TextValue = styled.div<{ isRed: boolean }>`
+export const TextValue = styled.div<{ $isRed: boolean }>`
   font-size: 52px;
   line-height: 0.8em;
   font-family: Times New Roman;
@@ -25,7 +25,7 @@ export const TextValue = styled.div<{ isRed: boolean }>`
   color: #1e0a00;
 
   ${(props) => {
-    if (props.isRed) {
+    if (props.$isRed) {
       return css`
         color: #c00020;
       `;
@@ -38,7 +38,7 @@ export const Pips = styled.div`
   gap: 2px;
 `;
 
-export const Pip = styled.div<{ isRed: boolean }>`
+export const Pip = styled.div<{ $isRed: boolean }>`
   display: block;
   align-self: center;
   justify-self: center;
@@ -48,7 +48,7 @@ export const Pip = styled.div<{ isRed: boolean }>`
   background-color: #1e0a00;
 
   ${(props) => {
-    if (props.isRed) {
+    if (props.$isRed) {
       return css`
         background-color: #c00020;
       `;

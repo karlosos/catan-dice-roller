@@ -9,7 +9,7 @@ export const Robber: React.FC<{ showRobber?: boolean }> = ({ showRobber }) => {
       <RobberStyled
         src={robberSrc}
         alt="robber"
-        animationDirection={animationDirection}
+        $animationDirection={animationDirection}
         data-testid={testId.robber}
       />
     </RobberContainer>

@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useKeyPress } from "hooks/useKeyPress";
+import { vi } from "vitest";
 
 describe("useKeyPress hook", () => {
   it("WHEN given key pressed THEN handler is called", async () => {
@@ -38,7 +39,7 @@ describe("useKeyPress hook", () => {
   };
 
   const renderTestComponent = ({ keyCodes }: { keyCodes: string[] }) => {
-    const onKeyPress = jest.fn();
+    const onKeyPress = vi.fn();
 
     render(<TestComponent onKeyPress={onKeyPress} keyCodes={keyCodes} />);
 

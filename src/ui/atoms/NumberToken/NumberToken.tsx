@@ -6,10 +6,10 @@ export const NumberToken = ({ value }: { value: number }) => {
 
   return (
     <Token>
-      <TextValue isRed={isRed}>{value}</TextValue>
+      <TextValue $isRed={isRed}>{value}</TextValue>
       <Pips>
         {[...Array(valueToPips(value))].map((_, idx) => (
-          <Pip isRed={isRed} key={idx} data-testid={testId.numberTokenPip} />
+          <Pip $isRed={isRed} key={idx} data-testid={testId.numberTokenPip} />
         ))}
       </Pips>
     </Token>

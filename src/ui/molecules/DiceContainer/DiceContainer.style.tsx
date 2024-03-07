@@ -52,9 +52,9 @@ export const DiceContainerStyled = styled.div`
   }
 `;
 
-export const Die1Styled = styled.div<{ animationName: "in" | "out" }>`
+export const Die1Styled = styled.div<{ $animationName: "in" | "out" }>`
   ${(props) => {
-    if (props.animationName === "out") {
+    if (props.$animationName === "out") {
       return css`
         animation-name: ${scaleDown1};
         animation-duration: 0.2s;
@@ -74,9 +74,9 @@ export const Die1Styled = styled.div<{ animationName: "in" | "out" }>`
   }}
 `;
 
-export const Die2Styled = styled.div<{ animationName: "in" | "out" }>`
+export const Die2Styled = styled.div<{ $animationName: "in" | "out" }>`
   ${(props) => {
-    if (props.animationName === "out") {
+    if (props.$animationName === "out") {
       return css`
         animation-name: ${scaleDown2};
         animation-duration: 0.2s;
@@ -119,7 +119,7 @@ export const scaleDownNumberToken = keyframes`
   }
 `;
 
-export const NumberTokenContainer = styled.div<{ animationName: "in" | "out" }>`
+export const NumberTokenContainer = styled.div<{ $animationName: "in" | "out" }>`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -127,7 +127,7 @@ export const NumberTokenContainer = styled.div<{ animationName: "in" | "out" }>`
   opacity: 0;
 
   ${(props) => {
-    if (props.animationName === "out") {
+    if (props.$animationName === "out") {
       return css`
         animation-name: ${scaleDownNumberToken};
         animation-duration: 0.2s;

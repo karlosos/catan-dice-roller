@@ -13,5 +13,10 @@ export default defineConfig(() => {
       viteTsconfigPaths(),
       VitePWA({ registerType: "autoUpdate" }),
     ],
+    test: {
+      globals: true,
+      environment: "jsdom",
+      setupFiles: "./src/tests/setup.ts",
+    },
   };
 });

@@ -33,10 +33,10 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
   return (
     <ButtonStyled
       onClick={handleClick}
-      isDisabled={isDisabled}
+      $isDisabled={isDisabled}
       data-testid={testId.primaryButton}
     >
-      <BackgroundHover isDisabled={isDisabled}>
+      <BackgroundHover $isDisabled={isDisabled}>
         <ContentStyled>{children}</ContentStyled>
       </BackgroundHover>
       <ContentStyled>{children}</ContentStyled>
