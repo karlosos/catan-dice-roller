@@ -22,7 +22,7 @@
 
     /* Additional */
     "types": ["dom-screen-wake-lock"],
-    "baseUrl": "src",
+    "baseUrl": "src"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

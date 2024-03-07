@@ -1,22 +1,22 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
   framework: {
-    name: '@storybook/react-vite',
+    name: "@storybook/react-vite",
     options: {
       legacyRootApi: true,
     },
   },
-    addons: [
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   docs: {
     autodocs: true,
   },
-  staticDirs: ['../public'],
+  staticDirs: ["../public"],
 };
 
 export default config;

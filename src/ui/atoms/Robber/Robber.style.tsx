@@ -16,7 +16,7 @@ export const animationOut = css`
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-fill-mode: both;
-`
+`;
 
 export const scaleUp = keyframes`
   0% {
@@ -35,7 +35,7 @@ export const animationIn = css`
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0, 0.4, 0.085, 1);
   animation-fill-mode: both;
-`
+`;
 
 export const RobberContainer = styled.div`
   grid-area: 1 / 1;
