@@ -1,13 +1,13 @@
 {
   "name": "catan-dice-roller",
-  "version": "0.1.0",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "vite",
+    "build": "tsc && vite build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
-    "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006 -s public",
     "storybook:build": "storybook build -s public",
     "format": "npx prettier --write .",
@@ -17,11 +17,8 @@
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-scripts": "5.0.1",
     "styled-components": "6.1.8",
-    "typescript": "4.6.2",
-    "use-sound": "4.0.1",
-    "web-vitals": "3.5.2"
+    "use-sound": "4.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -29,20 +26,20 @@
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-mdx-gfm": "^7.6.17",
     "@storybook/node-logger": "^7.6.17",
-    "@storybook/preset-create-react-app": "^7.6.17",
     "@storybook/react": "^7.6.17",
-    "@storybook/react-webpack5": "^7.6.17",
-    "@storybook/testing-library": "0.2.2",
+    "@storybook/react-vite": "^7.6.17",
     "@testing-library/jest-dom": "6.4.2",
     "@testing-library/react": "14.2.1",
     "@testing-library/user-event": "14.5.2",
     "@types/dom-screen-wake-lock": "^1.0.3",
     "@types/jest": "29.5.12",
-    "@types/node": "20.11.24",
-    "@types/react": "18.2.63",
-    "@types/react-dom": "18.2.20",
+    "@types/node": "20.11.25",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "8.57.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "9.1.0",
@@ -53,7 +50,9 @@
     "eslint-plugin-storybook": "^0.8.0",
     "prettier": "3.2.5",
     "storybook": "^7.6.17",
-    "tsconfig-paths-webpack-plugin": "4.1.0",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5",
+    "vite-tsconfig-paths": "^4.3.1",
     "webpack": "5.90.3"
   },
   "eslintConfig": {
@@ -98,8 +97,5 @@
       "!src/registerServiceWorker.js",
       "!src/**/*.stories.tsx"
     ]
-  },
-  "overrides": {
-    "react-refresh": "0.11.0"
   }
 }
