@@ -13,7 +13,14 @@ export default defineConfig(() => {
       viteTsconfigPaths(),
       VitePWA({
         registerType: "autoUpdate",
-        manifest: false,
+        // cache all the imports
+        workbox: {
+          globPatterns: ["**/*"],
+          maximumFileSizeToCacheInBytes: 5000000,
+        },
+        // cache all the
+        // static assets in the public folder
+        includeAssets: ["**/*"],
       }),
     ],
     test: {
