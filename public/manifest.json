@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "short_name": "Catan Dice Roller JSON",
-  "name": "Catan Dice Roller JSON",
+  "short_name": "Catan Dice Roller",
+  "name": "Catan Dice Roller",
   "icons": [
     {
       "src": "favicon.ico",
