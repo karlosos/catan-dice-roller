@@ -32,7 +32,3 @@ export const BottomContainer = styled.div`
     transform: scale(0.5);
   }
 `;
-
-export const ButtonWrapper = styled.div`
-  padding: 20px;
-`;

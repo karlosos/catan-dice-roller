@@ -72,3 +72,7 @@ export const ContentStyled = styled.span`
   text-transform: uppercase;
   transition: color ease-in-out 1000ms;
 `;
+
+export const ButtonWrapper = styled.div`
+  padding: 20px;
+`;

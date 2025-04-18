@@ -7,6 +7,7 @@ import {
   BackgroundHover,
   ButtonStyled,
   ContentStyled,
+  ButtonWrapper,
 } from "./PrimaryButton.style";
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<"div"> {
@@ -31,15 +32,17 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
   };
 
   return (
-    <ButtonStyled
-      onClick={handleClick}
-      $isDisabled={isDisabled}
-      data-testid={testId.primaryButton}
-    >
-      <BackgroundHover $isDisabled={isDisabled}>
+    <ButtonWrapper onTouchEnd={() => handleClick}>
+      <ButtonStyled
+        onClick={handleClick}
+        $isDisabled={isDisabled}
+        data-testid={testId.primaryButton}
+      >
+        <BackgroundHover $isDisabled={isDisabled}>
+          <ContentStyled>{children}</ContentStyled>
+        </BackgroundHover>
         <ContentStyled>{children}</ContentStyled>
-      </BackgroundHover>
-      <ContentStyled>{children}</ContentStyled>
-    </ButtonStyled>
+      </ButtonStyled>
+    </ButtonWrapper>
   );
 };

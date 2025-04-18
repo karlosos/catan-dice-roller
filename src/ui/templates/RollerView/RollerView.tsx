@@ -2,7 +2,7 @@ import { Robber } from "ui/atoms/Robber";
 import { DiceContainer } from "ui/molecules/DiceContainer";
 import styled from "styled-components";
 
-import { BottomContainer, ButtonWrapper, Container } from "./RollerView.style";
+import { BottomContainer, Container } from "./RollerView.style";
 import { RollerViewProps } from "./types";
 import { PrimaryButton } from "ui/atoms";
 
@@ -20,14 +20,12 @@ export const RollerView: React.FC<RollerViewProps> = ({
       <Robber showRobber={showRobber} />
     </OutputContainer>
     <BottomContainer>
-      <ButtonWrapper onTouchEnd={onRollButtonClick}>
-        <PrimaryButton
-          onClick={onRollButtonClick}
-          isDisabled={isRollButtonDisabled}
-        >
-          Roll
-        </PrimaryButton>
-      </ButtonWrapper>
+      <PrimaryButton
+        onClick={onRollButtonClick}
+        isDisabled={isRollButtonDisabled}
+      >
+        Roll
+      </PrimaryButton>
     </BottomContainer>
   </Container>
 );
