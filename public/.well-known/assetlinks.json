@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.vercel.catan_dice_roller.twa",
+      "sha256_cert_fingerprints": [
+        "41:3F:59:2D:F7:18:0F:08:F1:C3:A0:82:07:1A:0C:37:D6:3F:12:2B:2D:FD:F8:67:2D:93:13:FC:28:88:CE:EE"
+      ]
+    }
+  }
+]
